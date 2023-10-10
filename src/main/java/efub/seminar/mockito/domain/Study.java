@@ -11,10 +11,9 @@ import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
+@Getter @Setter @NoArgsConstructor
 public class Study {
+
     @Id @GeneratedValue
     private Long id;
     private StudyStatus status = StudyStatus.DRAFT;
@@ -40,4 +39,5 @@ public class Study {
         this.openedDateTime = LocalDateTime.now();
         this.status = StudyStatus.OPENED;
     }
+
 }
