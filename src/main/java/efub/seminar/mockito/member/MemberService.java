@@ -6,5 +6,6 @@ import efub.seminar.mockito.domain.Study;
 import java.util.Optional;
 
 public interface MemberService {
-    Member findById(Long memberId) throws MemberNotFoundException;
+    Optional<Member> findById(Long memberId) throws MemberNotFoundException;
+    void validate(Long memberId) throws InvalidMemberException;
 }
